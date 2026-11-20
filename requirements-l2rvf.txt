@@ -1,0 +1,9 @@
+# Dependencies of the l2rvf project code (Python >= 3.10).
+mujoco>=3.2
+numpy
+torch
+matplotlib
+imageio
+imageio-ffmpeg
+anthropic   # only for --provider anthropic
+openai      # only for --provider openai

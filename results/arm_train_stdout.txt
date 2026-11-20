@@ -1,0 +1,22 @@
+=== Sat Nov 14 00:49:10 2026 args {'quick': False, 'rounds': 8, 'n_per_round': 3000, 'n_synth': 12000, 'episodes_per_task': 4, 'T': 25, 'K': 48, 'iters': 3, 'chunk': 48, 'epochs': 120, 'hidden': 256, 'reuse_states': False}
+  visited [A] ep 0 H=12 stages 1/1 (2s)
+  visited [A] ep 1 H=36 stages 1/1 (6s)
+  visited [A] ep 2 H=12 stages 1/1 (3s)
+  visited [A] ep 3 H=36 stages 0/1 (6s)
+  visited [B] ep 0 H=12 stages 2/2 (2s)
+  visited [B] ep 1 H=36 stages 2/2 (7s)
+  visited [B] ep 2 H=12 stages 2/2 (2s)
+  visited [B] ep 3 H=36 stages 2/2 (8s)
+  visited [C] ep 0 H=12 stages 0/3 (5s)
+  visited [C] ep 1 H=36 stages 3/3 (14s)
+  visited [C] ep 2 H=12 stages 1/3 (5s)
+  visited [C] ep 3 H=36 stages 0/3 (14s)
+states: visited 760 synth 12000 (81s)
+[FVI round 0] targets 208s  y 0.426¡À0.355  train rel 0.082  val rel 0.109  held-out rel 0.108
+[FVI round 1] targets 206s  y 0.602¡À0.482  train rel 0.087  val rel 0.135  held-out rel 0.118
+[FVI round 2] targets 207s  y 0.693¡À0.563  train rel 0.094  val rel 0.169  held-out rel 0.140
+[FVI round 3] targets 208s  y 0.676¡À0.534  train rel 0.090  val rel 0.145  held-out rel 0.141
+[FVI round 4] targets 205s  y 0.668¡À0.513  train rel 0.083  val rel 0.142  held-out rel 0.129
+[FVI round 5] targets 204s  y 0.629¡À0.486  train rel 0.082  val rel 0.145  held-out rel 0.150
+[FVI round 6] targets 205s  y 0.620¡À0.464  train rel 0.070  val rel 0.121  held-out rel 0.127
+[FVI round 7] targets 203s  y 0.630¡À0.452  train rel 0.064  val rel 0.111  held-out rel 0.122

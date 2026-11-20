@@ -1,0 +1,38 @@
+{
+  "A": [
+    "Move the block to the green target.",
+    "Push the red block onto the green marker.",
+    "Put the cube on the target.",
+    "Slide the block over to the green square on the floor.",
+    "Get the red block to the target location.",
+    "Can you move the cube so it sits on the green marker?",
+    "Bring the block to the green target.",
+    "Shove the red cube to the target.",
+    "Place the block at the green marker.",
+    "I want the block on the green target."
+  ],
+  "B": [
+    "Open the drawer.",
+    "Pull the drawer open.",
+    "Open the cabinet drawer all the way.",
+    "Slide the drawer out.",
+    "Please open the drawer fully.",
+    "Pull out the drawer of the cabinet.",
+    "Can you open the drawer?",
+    "Get the drawer open.",
+    "Open up the drawer completely.",
+    "I need the drawer open."
+  ],
+  "C": [
+    "Put the block in the drawer.",
+    "Place the red block inside the drawer.",
+    "Get the cube into the drawer.",
+    "Put the cube away in the drawer.",
+    "Move the block into the cabinet drawer.",
+    "Store the red block in the drawer.",
+    "Can you put the block into the drawer?",
+    "Drop the block in the drawer.",
+    "I want the block inside the drawer.",
+    "Tidy up: the red cube goes in the drawer."
+  ]
+}

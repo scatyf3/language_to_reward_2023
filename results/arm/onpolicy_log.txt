@@ -1,0 +1,32 @@
+=== Sat Nov 14 01:35:47 2026 args {'rounds': 6, 'episodes': 4, 'every': 3, 'n_base': 2500, 'max_onpolicy': 6000, 'members': 5, 'kappa': 1.0, 'H': 10, 'K_mpc': 64, 'T': 25, 'K': 48, 'iters': 3, 'chunk': 48, 'epochs': 150, 'init': 'C:\\Users\\scat\\Documents\\GitHub\\language_to_reward_2023\\results\\arm\\value.pt', 'quick': False}
+  on-policy episodes: success A 0.00 B 0.25 C 0.00
+  optimism gap on new on-policy states: mean(V - y) = -0.602 (mean y 0.694, rel err 0.871)
+[round 0] n=3504 (on-policy 1004)  targets 229s  val rel 0.096
+  on-policy episodes: success A 0.00 B 0.25 C 0.00
+  optimism gap on new on-policy states: mean(V - y) = -0.341 (mean y 0.760, rel err 0.456)
+[round 1] n=4508 (on-policy 2008)  targets 299s  val rel 0.069
+  on-policy episodes: success A 0.00 B 0.50 C 0.00
+  optimism gap on new on-policy states: mean(V - y) = -0.203 (mean y 0.774, rel err 0.297)
+[round 2] n=5512 (on-policy 3012)  targets 366s  val rel 0.076
+  on-policy episodes: success A 0.25 B 0.75 C 0.00
+  optimism gap on new on-policy states: mean(V - y) = -0.156 (mean y 0.856, rel err 0.190)
+[round 3] n=6516 (on-policy 4016)  targets 435s  val rel 0.056
+  on-policy episodes: success A 0.00 B 0.25 C 0.25
+  optimism gap on new on-policy states: mean(V - y) = -0.147 (mean y 0.995, rel err 0.224)
+[round 4] n=7520 (on-policy 5020)  targets 503s  val rel 0.084
+  on-policy episodes: success A 0.50 B 1.00 C 0.00
+  optimism gap on new on-policy states: mean(V - y) = -0.275 (mean y 1.364, rel err 0.215)
+[round 5] n=8500 (on-policy 6000)  targets 567s  val rel 0.057
+=== Sat Nov 14 02:36:34 2026 args {'rounds': 4, 'episodes': 8, 'every': 3, 'n_base': 2500, 'max_onpolicy': 6000, 'members': 5, 'kappa': 1.0, 'H': 10, 'K_mpc': 64, 'T': 25, 'K': 48, 'iters': 3, 'chunk': 48, 'epochs': 150, 'init': 'results/arm/ensemble.pt', 'quick': False, 'resume': True}
+  on-policy episodes: success A 0.12 B 0.62 C 0.25
+  optimism gap on new on-policy states: mean(V - y) = -0.143 (mean y 1.055, rel err 0.158)
+[round 6] n=4508 (on-policy 2008)  targets 303s  val rel 0.071
+  on-policy episodes: success A 0.00 B 0.62 C 0.00
+  optimism gap on new on-policy states: mean(V - y) = -0.383 (mean y 1.395, rel err 0.310)
+[round 7] n=6516 (on-policy 4016)  targets 433s  val rel 0.075
+  on-policy episodes: success A 0.12 B 0.62 C 0.12
+  optimism gap on new on-policy states: mean(V - y) = -0.289 (mean y 1.521, rel err 0.207)
+[round 8] n=8500 (on-policy 6000)  targets 561s  val rel 0.050
+  on-policy episodes: success A 0.38 B 0.75 C 0.12
+  optimism gap on new on-policy states: mean(V - y) = -0.164 (mean y 1.212, rel err 0.143)
+[round 9] n=8500 (on-policy 6000)  targets 554s  val rel 0.045

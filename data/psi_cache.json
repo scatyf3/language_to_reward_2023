@@ -1,0 +1,781 @@
+{
+ "psi_layout": [
+  "",
+  "Index layout (NPSI = 13):",
+  "  0  w_palm_block     weight of ||palm - block||",
+  "  1  w_palm_handle    weight of ||palm - drawer handle||",
+  "  2  w_block_drawer   weight of ||block - drawer inside||",
+  "  3  w_block_pos      weight of ||block - (bx, by, bz)||",
+  "  4-6  bx, by, bz     block target position",
+  "  7  w_drawer         weight of |drawer_open_fraction - f| * DRAWER_SCALE",
+  "  8  f                drawer target open fraction in [0, 1]",
+  "  9  w_palm_pos       weight of ||palm - (px, py, pz)||",
+  "  10-12 px, py, pz    palm target position"
+ ],
+ "entries": [
+  {
+   "task": "A",
+   "instruction": "Move the block to the green target.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.45,
+    0.05,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "pos(block,0.45,0.05,0.02,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "A",
+   "instruction": "Push the red block onto the green marker.",
+   "psi": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.45,
+    0.05,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "l2(palm,block,1.0)",
+    "pos(block,0.45,0.05,0.02,2.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "A",
+   "instruction": "Put the cube on the target.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.45,
+    0.05,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "pos(block,0.45,0.05,0.02,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "A",
+   "instruction": "Slide the block over to the green square on the floor.",
+   "psi": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.45,
+    0.05,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "l2(palm,block,1.0)",
+    "pos(block,0.45,0.05,0.02,2.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "A",
+   "instruction": "Get the red block to the target location.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.45,
+    0.05,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "pos(block,0.45,0.05,0.02,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "A",
+   "instruction": "Can you move the cube so it sits on the green marker?",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.45,
+    0.05,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "pos(block,0.45,0.05,0.02,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "A",
+   "instruction": "Bring the block to the green target.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.45,
+    0.05,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "pos(block,0.45,0.05,0.02,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "A",
+   "instruction": "Shove the red cube to the target.",
+   "psi": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.45,
+    0.05,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "l2(palm,block,1.0)",
+    "pos(block,0.45,0.05,0.02,2.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "A",
+   "instruction": "Place the block at the green marker.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.45,
+    0.05,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "pos(block,0.45,0.05,0.02,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "A",
+   "instruction": "I want the block on the green target.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.45,
+    0.05,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "pos(block,0.45,0.05,0.02,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "B",
+   "instruction": "Open the drawer.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "B",
+   "instruction": "Pull the drawer open.",
+   "psi": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    2.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "l2(palm,drawer_handle,1.0)",
+    "joint(drawer,1.0,2.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "B",
+   "instruction": "Open the cabinet drawer all the way.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "B",
+   "instruction": "Slide the drawer out.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "B",
+   "instruction": "Please open the drawer fully.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "B",
+   "instruction": "Pull out the drawer of the cabinet.",
+   "psi": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    2.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "l2(palm,drawer_handle,1.0)",
+    "joint(drawer,1.0,2.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "B",
+   "instruction": "Can you open the drawer?",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "B",
+   "instruction": "Get the drawer open.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "B",
+   "instruction": "Open up the drawer completely.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "B",
+   "instruction": "I need the drawer open.",
+   "psi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "execute_plan(4)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "C",
+   "instruction": "Put the block in the drawer.",
+   "psi": [
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "l2(block,drawer_inside,2.0)",
+    "execute_plan(6)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "C",
+   "instruction": "Place the red block inside the drawer.",
+   "psi": [
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "l2(block,drawer_inside,2.0)",
+    "execute_plan(6)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "C",
+   "instruction": "Get the cube into the drawer.",
+   "psi": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "l2(block,drawer_inside,1.0)",
+    "execute_plan(6)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "C",
+   "instruction": "Put the cube away in the drawer.",
+   "psi": [
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "l2(block,drawer_inside,2.0)",
+    "execute_plan(6)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "C",
+   "instruction": "Move the block into the cabinet drawer.",
+   "psi": [
+    1.0,
+    0.0,
+    2.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "l2(palm,block,1.0)",
+    "joint(drawer,1.0,1.0)",
+    "l2(block,drawer_inside,2.0)",
+    "execute_plan(6)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "C",
+   "instruction": "Store the red block in the drawer.",
+   "psi": [
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "l2(block,drawer_inside,2.0)",
+    "execute_plan(6)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "C",
+   "instruction": "Can you put the block into the drawer?",
+   "psi": [
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "l2(block,drawer_inside,2.0)",
+    "execute_plan(6)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "C",
+   "instruction": "Drop the block in the drawer.",
+   "psi": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "l2(block,drawer_inside,1.0)",
+    "execute_plan(6)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "C",
+   "instruction": "I want the block inside the drawer.",
+   "psi": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "l2(block,drawer_inside,1.0)",
+    "execute_plan(6)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  },
+  {
+   "task": "C",
+   "instruction": "Tidy up: the red cube goes in the drawer.",
+   "psi": [
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    0.5,
+    0.0,
+    0.02,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.3
+   ],
+   "calls": [
+    "reset_reward()",
+    "joint(drawer,1.0,1.0)",
+    "l2(block,drawer_inside,2.0)",
+    "execute_plan(6)"
+   ],
+   "source": "claude-opus-5-5 (in-session by the coding assistant, following the fixed prompts; no API call - regenerate with --provider anthropic)"
+  }
+ ]
+}

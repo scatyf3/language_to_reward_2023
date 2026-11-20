@@ -1,0 +1,108 @@
+<!--
+  Franka Panda manipulation scene for the L2R + learned value project.
+  Loaded from the MuJoCo Menagerie franka_emika_panda folder (the loader copies
+  this file next to mjx_panda.xml), see l2rvf/arm/env.py.
+
+  Layout (robot base at the origin, facing +x):
+    * block   : 4 cm cube, free joint (on the floor for task A, parked for B,
+                on the cabinet top for C).
+    * cabinet : fixed, x in [0.40, 0.70], y in [0.30, 0.62], top at z = 0.18.
+    * drawer  : slides along -y out of the cabinet (0 = closed, 0.18 = open).
+                The handle is a bar along x, 5.5 cm in front of the drawer face;
+                the "handle" site sits in the gap between bar and face.
+    * target  : mocap marker (visual only) for task A.
+-->
+<mujoco model="l2r panda scene">
+  <include file="mjx_panda.xml"/>
+
+  <option timestep="0.005" iterations="4" ls_iterations="6" integrator="implicitfast">
+    <flag eulerdamp="disable"/>
+  </option>
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.35 0.35 0.35" specular="0 0 0"/>
+    <global azimuth="200" elevation="-25" offwidth="960" offheight="720"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.75 0.75 0.72"
+      rgb2="0.65 0.65 0.62" markrgb="0.5 0.5 0.5" width="300" height="300"/>
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.05"/>
+    <material name="wood" rgba="0.55 0.38 0.22 1"/>
+    <material name="wood_dark" rgba="0.42 0.28 0.16 1"/>
+    <material name="metal" rgba="0.75 0.75 0.78 1"/>
+  </asset>
+
+  <default>
+    <default class="furniture">
+      <geom type="box" contype="1" conaffinity="1" condim="3" friction="0.8 0.01 0.001"
+        solref="0.01 1" material="wood"/>
+    </default>
+  </default>
+
+  <worldbody>
+    <light pos="0.5 0 2" dir="0 0 -1" directional="true"/>
+    <geom name="floor" size="0 0 0.05" type="plane" material="groundplane" contype="1" conaffinity="1"
+      friction="0.6 0.01 0.001"/>
+
+    <!-- Cabinet (static). Inner cavity y in [0.30, 0.60], x in [0.42, 0.68]. -->
+    <body name="cabinet" pos="0.55 0.46 0">
+      <geom class="furniture" name="cab_top" pos="0 0 0.17" size="0.15 0.16 0.01"/>
+      <geom class="furniture" name="cab_left" pos="-0.14 0 0.08" size="0.01 0.16 0.08"/>
+      <geom class="furniture" name="cab_right" pos="0.14 0 0.08" size="0.01 0.16 0.08"/>
+      <geom class="furniture" name="cab_back" pos="0 0.15 0.08" size="0.13 0.01 0.08"/>
+
+      <!-- Drawer: tray with floor at z = 0.02 and a front face with a handle. -->
+      <body name="drawer" pos="0 0 0">
+        <joint name="drawer" type="slide" axis="0 -1 0" range="0 0.18" damping="8" armature="0.05"/>
+        <inertial pos="0 0 0.06" mass="0.6" diaginertia="0.01 0.01 0.01"/>
+        <geom class="furniture" name="drw_floor" pos="0 0.0 0.02" size="0.12 0.14 0.006" material="wood_dark"/>
+        <geom class="furniture" name="drw_left" pos="-0.12 0.0 0.055" size="0.006 0.14 0.035" material="wood_dark"/>
+        <geom class="furniture" name="drw_right" pos="0.12 0.0 0.055" size="0.006 0.14 0.035" material="wood_dark"/>
+        <geom class="furniture" name="drw_back" pos="0 0.135 0.055" size="0.12 0.006 0.035" material="wood_dark"/>
+        <geom class="furniture" name="drw_front" pos="0 -0.155 0.065" size="0.135 0.008 0.05"/>
+        <!-- Handle: bar along x, 5.5 cm in front of the face, so the closed
+             fingers can hook into the gap and pull. -->
+        <geom class="furniture" name="handle_post_l" pos="-0.06 -0.19 0.10" size="0.007 0.027 0.007" material="metal"/>
+        <geom class="furniture" name="handle_post_r" pos="0.06 -0.19 0.10" size="0.007 0.027 0.007" material="metal"/>
+        <geom class="furniture" name="handle_bar" type="capsule" pos="0 -0.218 0.10" size="0.008 0.067"
+          zaxis="1 0 0" material="metal"/>
+        <site name="handle" pos="0 -0.19 0.10" size="0.008" rgba="1 0 1 0.6"/>
+        <site name="drawer_inside" pos="0 -0.05 0.05" size="0.008" rgba="0 1 1 0.6"/>
+      </body>
+    </body>
+
+    <body name="block" pos="0.5 -0.2 0.02">
+      <freejoint name="block"/>
+      <geom name="block" type="box" size="0.02 0.02 0.02" mass="0.08" contype="3" conaffinity="3" condim="4"
+        friction="0.7 0.02 0.002" solref="0.01 1" rgba="0.85 0.2 0.2 1"/>
+      <site name="block" size="0.005" rgba="1 1 1 0"/>
+    </body>
+
+    <body name="target" mocap="true" pos="0.5 0.05 0.02">
+      <geom type="box" size="0.022 0.022 0.002" pos="0 0 -0.018" rgba="0.1 0.8 0.1 0.5" contype="0"
+        conaffinity="0"/>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="cabinet" body2="drawer"/>
+  </contact>
+
+  <sensor>
+    <framepos name="palm_pos" objtype="site" objname="gripper"/>
+    <framezaxis name="palm_zaxis" objtype="site" objname="gripper"/>
+    <framepos name="block_pos" objtype="site" objname="block"/>
+    <framepos name="handle_pos" objtype="site" objname="handle"/>
+    <framepos name="drawer_inside_pos" objtype="site" objname="drawer_inside"/>
+    <jointpos name="drawer_q" joint="drawer"/>
+    <jointpos name="finger_q" joint="finger_joint1"/>
+    <framelinvel name="block_vel" objtype="site" objname="block"/>
+    <framexaxis name="palm_xaxis" objtype="site" objname="gripper"/>
+    <!-- Appended for the L2R reproduction (l2rvf/repro); earlier indices unchanged. -->
+    <framexaxis name="block_xaxis" objtype="site" objname="block"/>
+    <framezaxis name="block_zaxis" objtype="site" objname="block"/>
+    <framepos name="target_pos" objtype="body" objname="target"/>
+  </sensor>
+</mujoco>

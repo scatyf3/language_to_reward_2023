@@ -1,0 +1,183 @@
+{
+  "args": {
+    "rounds": 4,
+    "episodes": 8,
+    "every": 3,
+    "n_base": 2500,
+    "max_onpolicy": 6000,
+    "members": 5,
+    "kappa": 1.0,
+    "H": 10,
+    "K_mpc": 64,
+    "T": 25,
+    "K": 48,
+    "iters": 3,
+    "chunk": 48,
+    "epochs": 150,
+    "init": "results/arm/ensemble.pt",
+    "quick": false,
+    "resume": true
+  },
+  "history": [
+    {
+      "round": 0,
+      "onpolicy_success": {
+        "A": 0.0,
+        "B": 0.25,
+        "C": 0.0
+      },
+      "optimism_gap": -0.6016385478277512,
+      "onpolicy_rel_err": 0.871428545494077,
+      "n_train": 3504,
+      "n_onpolicy": 1004,
+      "y_mean": 0.7591832582958467,
+      "collect_s": 36.438600063323975,
+      "target_s": 229.2007827758789,
+      "val_rel": 0.09589258432388306
+    },
+    {
+      "round": 1,
+      "onpolicy_success": {
+        "A": 0.0,
+        "B": 0.25,
+        "C": 0.0
+      },
+      "optimism_gap": -0.34066647533756944,
+      "onpolicy_rel_err": 0.45574892784479315,
+      "n_train": 4508,
+      "n_onpolicy": 2008,
+      "y_mean": 0.9899549029793518,
+      "collect_s": 45.628037452697754,
+      "target_s": 298.6011571884155,
+      "val_rel": 0.06895277053117752
+    },
+    {
+      "round": 2,
+      "onpolicy_success": {
+        "A": 0.0,
+        "B": 0.5,
+        "C": 0.0
+      },
+      "optimism_gap": -0.2026789928462693,
+      "onpolicy_rel_err": 0.2969705470621473,
+      "n_train": 5512,
+      "n_onpolicy": 3012,
+      "y_mean": 1.138949702809913,
+      "collect_s": 47.1940176486969,
+      "target_s": 366.21919894218445,
+      "val_rel": 0.0759764477610588
+    },
+    {
+      "round": 3,
+      "onpolicy_success": {
+        "A": 0.25,
+        "B": 0.75,
+        "C": 0.0
+      },
+      "optimism_gap": -0.1558083590754688,
+      "onpolicy_rel_err": 0.1903400585243034,
+      "n_train": 6516,
+      "n_onpolicy": 4016,
+      "y_mean": 1.308541234114394,
+      "collect_s": 47.79944944381714,
+      "target_s": 434.824734210968,
+      "val_rel": 0.056430908292531966
+    },
+    {
+      "round": 4,
+      "onpolicy_success": {
+        "A": 0.0,
+        "B": 0.25,
+        "C": 0.25
+      },
+      "optimism_gap": -0.14715247648167235,
+      "onpolicy_rel_err": 0.22391083220325422,
+      "n_train": 7520,
+      "n_onpolicy": 5020,
+      "y_mean": 1.381813396343374,
+      "collect_s": 46.33814454078674,
+      "target_s": 503.498654127121,
+      "val_rel": 0.08436640352010727
+    },
+    {
+      "round": 5,
+      "onpolicy_success": {
+        "A": 0.5,
+        "B": 1.0,
+        "C": 0.0
+      },
+      "optimism_gap": -0.27478912912966386,
+      "onpolicy_rel_err": 0.21461549638676936,
+      "n_train": 8500,
+      "n_onpolicy": 6000,
+      "y_mean": 1.5049599659142743,
+      "collect_s": 45.31867599487305,
+      "target_s": 566.5972764492035,
+      "val_rel": 0.05707751587033272
+    },
+    {
+      "round": 6,
+      "onpolicy_success": {
+        "A": 0.125,
+        "B": 0.625,
+        "C": 0.25
+      },
+      "optimism_gap": -0.14294531335942587,
+      "onpolicy_rel_err": 0.15798042788252312,
+      "n_train": 4508,
+      "n_onpolicy": 2008,
+      "y_mean": 1.3798689808601183,
+      "collect_s": 92.59107708930969,
+      "target_s": 302.6704730987549,
+      "val_rel": 0.07067809700965881
+    },
+    {
+      "round": 7,
+      "onpolicy_success": {
+        "A": 0.0,
+        "B": 0.625,
+        "C": 0.0
+      },
+      "optimism_gap": -0.38283717935083056,
+      "onpolicy_rel_err": 0.31039466257425324,
+      "n_train": 6516,
+      "n_onpolicy": 4016,
+      "y_mean": 1.3805692444693074,
+      "collect_s": 87.96352505683899,
+      "target_s": 432.53209042549133,
+      "val_rel": 0.0751212328672409
+    },
+    {
+      "round": 8,
+      "onpolicy_success": {
+        "A": 0.125,
+        "B": 0.625,
+        "C": 0.125
+      },
+      "optimism_gap": -0.2894529024397986,
+      "onpolicy_rel_err": 0.20694531551149292,
+      "n_train": 8500,
+      "n_onpolicy": 6000,
+      "y_mean": 1.543609008830439,
+      "collect_s": 88.92461729049683,
+      "target_s": 560.8180944919586,
+      "val_rel": 0.05044002905488014
+    },
+    {
+      "round": 9,
+      "onpolicy_success": {
+        "A": 0.375,
+        "B": 0.75,
+        "C": 0.125
+      },
+      "optimism_gap": -0.16410857386478328,
+      "onpolicy_rel_err": 0.14252164687492222,
+      "n_train": 8500,
+      "n_onpolicy": 6000,
+      "y_mean": 1.7634920890564796,
+      "collect_s": 88.01321911811829,
+      "target_s": 553.78342628479,
+      "val_rel": 0.04450778141617775
+    }
+  ]
+}

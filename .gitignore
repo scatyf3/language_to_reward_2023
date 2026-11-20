@@ -22,3 +22,9 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+# l2rvf
+.venv/
+third_party/
+results/**/*.npz
+results/**/*.pt

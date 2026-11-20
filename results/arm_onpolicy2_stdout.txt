@@ -1,0 +1,13 @@
+=== Sat Nov 14 02:36:34 2026 args {'rounds': 4, 'episodes': 8, 'every': 3, 'n_base': 2500, 'max_onpolicy': 6000, 'members': 5, 'kappa': 1.0, 'H': 10, 'K_mpc': 64, 'T': 25, 'K': 48, 'iters': 3, 'chunk': 48, 'epochs': 150, 'init': 'results/arm/ensemble.pt', 'quick': False, 'resume': True}
+  on-policy episodes: success A 0.12 B 0.62 C 0.25
+  optimism gap on new on-policy states: mean(V - y) = -0.143 (mean y 1.055, rel err 0.158)
+[round 6] n=4508 (on-policy 2008)  targets 303s  val rel 0.071
+  on-policy episodes: success A 0.00 B 0.62 C 0.00
+  optimism gap on new on-policy states: mean(V - y) = -0.383 (mean y 1.395, rel err 0.310)
+[round 7] n=6516 (on-policy 4016)  targets 433s  val rel 0.075
+  on-policy episodes: success A 0.12 B 0.62 C 0.12
+  optimism gap on new on-policy states: mean(V - y) = -0.289 (mean y 1.521, rel err 0.207)
+[round 8] n=8500 (on-policy 6000)  targets 561s  val rel 0.050
+  on-policy episodes: success A 0.38 B 0.75 C 0.12
+  optimism gap on new on-policy states: mean(V - y) = -0.164 (mean y 1.212, rel err 0.143)
+[round 9] n=8500 (on-policy 6000)  targets 554s  val rel 0.045

@@ -1,0 +1,21 @@
+args: {'quick': False, 'rounds': 8, 'n_states': 8192, 'T': 20, 'K_target': 256, 'iters_target': 4, 'chunk': 512, 'epochs': 150, 'hidden': 128, 'H': 8, 'H_long': 40, 'K': 128, 'iters': 2, 'episodes': 100}
+[FVI round 0] targets 33.9s  mean y 0.833  train rel 0.051  held-out rel 0.053
+[FVI round 1] targets 37.7s  mean y 1.269  train rel 0.044  held-out rel 0.046
+[FVI round 2] targets 37.3s  mean y 1.569  train rel 0.040  held-out rel 0.041
+[FVI round 3] targets 37.4s  mean y 1.795  train rel 0.032  held-out rel 0.035
+[FVI round 4] targets 37.6s  mean y 2.045  train rel 0.028  held-out rel 0.030
+[FVI round 5] targets 40.4s  mean y 2.299  train rel 0.025  held-out rel 0.026
+[FVI round 6] targets 69.5s  mean y 2.506  train rel 0.023  held-out rel 0.024
+[FVI round 7] targets 40.4s  mean y 2.773  train rel 0.020  held-out rel 0.022
+L2R (reward only)            H=  8  success 0.00  key 0.00  1.16 ms/step
+L2R + hand shaping           H=  8  success 0.86  key 1.00  1.39 ms/step
+L2R + learned V (ours)       H=  8  success 0.99  key 1.00  2.23 ms/step
+Long horizon H=40            H= 40  success 0.08  key 0.09  5.30 ms/step
+sweep H=  2: no V 0.00  with V 0.97
+sweep H=  4: no V 0.00  with V 0.98
+sweep H=  8: no V 0.00  with V 0.99
+sweep H= 16: no V 0.00  with V 0.85
+sweep H= 24: no V 0.00  with V 0.83
+sweep H= 32: no V 0.00  with V 0.84
+sweep H= 48: no V 0.23  with V 0.81
+wrote C:\Users\scat\Documents\GitHub\language_to_reward_2023\results\toy
